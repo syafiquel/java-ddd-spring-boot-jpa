@@ -1,12 +1,10 @@
 version: '2'
 
 services:
-  app:
+  film-app:
     build:
       context: .
     container_name: app
-    volumes:
-      - 'film-app-data:/home/dev'
     ports:
       - 8087:8080
     depends_on:
@@ -19,19 +17,12 @@ services:
       - SPRING_DATASOURCE_PASSWORD=pgroot
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
           
-  db:
-    image: 'postgres:13.1-alpine'
+  postgres-db:
+    build:
+      context: ./db
     container_name: db
     ports:
       - '5432'
-    volumes:
-      - db-data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=pgroot
       - POSTGRES_PASSWORD=pgroot
-
-volumes:
-  db-data:
-    driver: local
-  film-app-data:
-    driver: local

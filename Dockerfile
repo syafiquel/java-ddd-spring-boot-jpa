@@ -1,12 +1,14 @@
 FROM openjdk:11-jdk
 
+
 WORKDIR /home/dev
 
 COPY . .
 
-RUN ./mvnw spring-boot:run
+RUN ./mvnw clean package -DskipTests
 
-CMD [  "/bin/bash" ]
+COPY target/film.app-0.0.1-SNAPSHOT.jar film.app-0.0.1-SNAPSHOT.jar
 
+ENTRYPOINT [ "java","-jar","/film.app-0.0.1-SNAPSHOT.jar" ]
 
-
+#CMD [  "/bin/bash" ]

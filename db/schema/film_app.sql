@@ -24,6 +24,10 @@ SET default_table_access_method = heap;
 -- Name: films; Type: TABLE; Schema: public; Owner: pgroot
 --
 
+CREATE DATABASE film_app;
+
+\c film_app;
+
 CREATE TABLE public.films (
     id integer NOT NULL,
     title character varying(255),

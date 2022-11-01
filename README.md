@@ -1,4 +1,4 @@
-# java-ddd-spring-boot-jpa
+# spring-boot-hibernate-postgres
 A repo for personal journey to become a fullstack Java developer
 This project repository is a demo of Spring Boot Web Application that demonstrates the usage of REST API.
 The data used in this project is obtained from an Public Open Data Sharing Platform by Malaysian Goverment Agency MAMPU (https://www.data.gov.my/data/ms_MY/dataset)

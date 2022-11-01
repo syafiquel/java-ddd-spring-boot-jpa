@@ -1,10 +1,12 @@
 FROM openjdk:11-jdk
 
-RUN git clone https://github.com/syafiquel/spring-boot-hibernate-postgres.git
+WORKDIR /home/dev
 
-WORKDIR /home/dev/spring-boot-hibernate-postgres
+COPY . .
 
-CMD [  "./mvnw spring-boot:run" ]
+RUN ./mvnw spring-boot:run
+
+CMD [  "/bin/bash" ]
 
 
 

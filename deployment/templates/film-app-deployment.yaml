@@ -28,12 +28,12 @@ spec:
             - name: SPRING_DATASOURCE_PASSWORD
               value: pgroot
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://db:5432/film_app
+              value: jdbc:postgresql://postgres-db:5432/film_app
             - name: SPRING_DATASOURCE_USERNAME
               value: pgroot
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
-          image: film-app
+          image: spring-boot-hibernate-postgres-app:latest
           imagePullPolicy: Never
           name: app
           ports:

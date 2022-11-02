@@ -29,7 +29,7 @@ spec:
               value: pgroot
             - name: POSTGRES_USER
               value: pgroot
-          image: postgres-db
+          image: spring-boot-hibernate-postgres-db:latest
           imagePullPolicy: Never
           name: db
           ports:

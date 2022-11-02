@@ -1,9 +1,10 @@
 version: '2'
 
 services:
-  film-app:
+  app:
     build:
       context: .
+    image: spring-boot-hibernate-postgres-app
     container_name: app
     ports:
       - 8087:8080
@@ -17,9 +18,10 @@ services:
       - SPRING_DATASOURCE_PASSWORD=pgroot
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
           
-  postgres-db:
+  db:
     build:
       context: ./db
+    image: spring-boot-hibernate-postgres-db
     container_name: postgres-db
     ports:
       - '5432'

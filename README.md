@@ -11,7 +11,7 @@ This web application serves as a platform to search and update a list of films t
 - Java JDK 8
 - Spring Framework 
 - Spring Boot
-- Swagger 3
+- Swagger UI
 - PostgreSQL
 - Minikube
 - Helm
@@ -75,6 +75,22 @@ This web application serves as a platform to search and update a list of films t
     helm delete film-app --purge
     ```
 
+## Demo
 
+### Helm running the pods
+
+![Pods creation](assets/helm-install.png)
+
+### Helm pods status
+
+![Pods status](assets/helm-status.png)
+
+### Kubectl port forwarding
+
+![Pods port forwarding](assets/k8-port-forward.png)
+
+### Kubectl port forwarding
+
+![Swagger UI](assets/swagger.jpg)
     
     

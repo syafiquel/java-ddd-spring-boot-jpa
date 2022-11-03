@@ -89,7 +89,7 @@ This web application serves as a platform to search and update a list of films t
 
 ![Pods port forwarding](assets/k8-port-forward.png)
 
-### Kubectl port forwarding
+### API Demo using Swagger UI
 
 ![Swagger UI](assets/swagger.jpg)
     
